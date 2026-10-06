@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://allopatrick.fr/sitemap.xml

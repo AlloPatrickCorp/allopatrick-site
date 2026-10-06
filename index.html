@@ -8,13 +8,23 @@
 <link rel="canonical" href="https://allopatrick.fr/">
 <link rel="alternate" hreflang="fr" href="https://allopatrick.fr/">
 <link rel="alternate" hreflang="en" href="https://allopatrick.fr/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Patrick — L'application qui rend le lundi matin au patron">
+<meta property="og:description" content="Les heures, le planning et les congés de votre équipe, saisis sur le chantier et validés en un clic. Construite dans une entreprise d'électricité de Haute-Savoie.">
+<meta property="og:url" content="https://allopatrick.fr/">
+<meta property="og:image" content="https://allopatrick.fr/img/og.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Patrick","applicationCategory":"BusinessApplication","operatingSystem":"Android, iOS, Web","url":"https://allopatrick.fr/","description":"Heures, planning et congés pour les petites entreprises du bâtiment : saisie sur le chantier, validation en un clic, export paie.","offers":{"@type":"Offer","price":"10","priceCurrency":"EUR","description":"10 € HT par salarié et par mois"},"provider":{"@type":"Organization","name":"Patrick","email":"info@allopatrick.com","url":"https://allopatrick.fr/"}}
+</script>
 <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
 
 <header class="top">
-  <a class="wordmark" href="#"><span>Patrick</span><i></i></a>
+  <a class="wordmark" href="/"><span>Patrick</span><i></i></a>
   <nav>
     <a href="#histoire">L'histoire</a>
     <a href="#fait">Ce qu'il fait</a>
@@ -36,7 +46,7 @@
     <p class="proof">Utilisée tous les jours chez XP ELEC, entreprise d'électricité à Thyez, Haute-Savoie : treize salariés, depuis 2006.</p>
   </div>
   <figure class="hero-shots">
-    <img class="web" src="img/web_accueil_admin.png" alt="Le lundi matin du patron sur l'ordinateur : semaines à valider, congés à traiter, qui est où aujourd'hui" width="1100" height="618">
+    <img class="web" src="img/web_accueil_admin.png" alt="Le lundi matin du patron sur l'ordinateur : semaines à valider, congés à traiter, qui est où aujourd'hui" width="1366" height="768" fetchpriority="high">
     <img class="phone" src="img/app_semaine.png" alt="La semaine d'un électricien sur le téléphone" width="390" height="844">
   </figure>
 </section>
@@ -67,6 +77,8 @@
         <li><b>Le planning dans la poche.</b> Chaque soir, chacun reçoit son chantier du lendemain, avec l'adresse et le téléphone du client.</li>
         <li><b>Les congés depuis le téléphone.</b> Demandés en trois appuis, acceptés en un, inscrits dans les heures aussitôt.</li>
         <li><b>La photo du tableau</b> est dans le dossier du chantier avant que le camion soit rentré.</li>
+        <li><b>« Il me faut… »</b> : le salarié écrit ce qui manque, le dépôt le prépare, il est prévenu quand c'est prêt.</li>
+        <li><b>La fiche du chantier</b> dans la poche : adresse, contact, code du portail, qui est planifié, même sans réseau.</li>
       </ul>
     </div>
     <div>
@@ -76,14 +88,29 @@
         <li><b>Les heures supplémentaires se comptent seules,</b> par semaine et par contrat, sans recopier.</li>
         <li><b>L'export paie du mois</b> pour votre comptable : un fichier Excel, une ligne par salarié, les absences par motif.</li>
         <li><b>Le planning en grille,</b> envoyé sur les téléphones d'un clic, avec l'alerte si vous le changez après l'envoi.</li>
-        <li><b>Chaque chantier a son dossier :</b> client, photos, plans, heures consommées face au devis, rapport PDF.</li>
+        <li><b>Chaque chantier a son dossier :</b> client, photos, plans, heures consommées face au devis, rapport PDF, et une alerte quand le devis approche de la fin.</li>
+        <li><b>Le relevé des heures en régie,</b> jour par jour, avec sa case « bon pour accord », à agrafer à la facture ou à envoyer au client.</li>
+        <li><b>La pluie, en un clic :</b> le chantier s'arrête pour intempéries, chacun est prévenu, le comptable a sa ligne.</li>
+        <li><b>Un lien pour le client,</b> un écran pour l'atelier : le client suit ses photos et ses heures en régie ; l'atelier affiche qui va où, la météo et le matériel à charger.</li>
       </ul>
     </div>
   </div>
   <div class="shots">
-    <figure><img src="img/app_saisir.png" alt="Saisie d'une journée sur le téléphone" width="390" height="844"><figcaption>La journée, en un appui.</figcaption></figure>
-    <figure><img src="img/web_planning_notifie.png" alt="Le planning de la semaine, envoyé à l'équipe" width="1100" height="618"><figcaption>Le planning de la semaine, envoyé à l'équipe.</figcaption></figure>
-    <figure><img src="img/web_somme_exportee.png" alt="Le compte des heures du mois et l'export paie" width="1100" height="618"><figcaption>Le mois, et le fichier du comptable.</figcaption></figure>
+    <figure><img src="img/app_saisir.png" alt="Saisie d'une journée sur le téléphone" width="390" height="844" loading="lazy"><figcaption>La journée, en un appui.</figcaption></figure>
+    <figure><img src="img/web_planning_notifie.png" alt="Le planning de la semaine, envoyé à l'équipe" width="1366" height="768" loading="lazy"><figcaption>Le planning de la semaine, envoyé à l'équipe.</figcaption></figure>
+    <figure><img src="img/web_somme_exportee.png" alt="Le compte des heures du mois et l'export paie" width="1366" height="768" loading="lazy"><figcaption>Le mois, et le fichier du comptable.</figcaption></figure>
+  </div>
+</section>
+
+<section id="pourqui" class="who">
+  <h2>Pour qui</h2>
+  <div class="cols">
+    <div>
+      <p>Les entreprises du bâtiment de <b>3 à 25 salariés</b> où le patron est encore sur les chantiers : électriciens, plombiers, chauffagistes, maçons, menuisiers, peintres. Celles où les heures se font le dimanche parce que personne d'autre ne peut les faire.</p>
+    </div>
+    <div>
+      <p>Pas pour les entreprises de cinquante personnes avec un bureau d'études et un service paie : il y a des logiciels pour elles, plus gros et plus chers. Patrick fait trois choses, les heures, le planning et les congés, et les fait sans formation.</p>
+    </div>
   </div>
 </section>
 
@@ -141,7 +168,7 @@
 <section id="contact" class="contact">
   <h2>Parler à Patrick</h2>
   <p>Un appel d'une demi-heure suffit pour savoir si l'application est faite pour votre équipe. Nous venons vous voir en Haute-Savoie ; ailleurs, nous faisons la démonstration en visio.</p>
-  <p class="big"><a href="tel:[téléphone]">[téléphone]</a><br><a href="mailto:[e-mail]">[e-mail]</a></p>
+  <p class="big"><a href="mailto:info@allopatrick.com">info@allopatrick.com</a></p>
   <p>Vous préférez regarder d'abord ? <a href="https://demo.allopatrick.fr">Essayez l'entreprise de démonstration</a> : un patron, six électriciens, deux mois d'heures. Les identifiants sont sur la page de connexion. Tout est remis à neuf chaque nuit.</p>
   <p class="proof">Patrick est construite à Thyez, en Haute-Savoie, dans l'entreprise d'électricité XP ELEC qui l'utilise tous les jours.</p>
 </section>
@@ -151,7 +178,7 @@
 <footer>
   <div class="wordmark small"><span>Patrick</span><i></i></div>
   <p>L'application de <img src="img/logo.png" alt="XP ELEC" height="26"></p>
-  <p class="fine">[Raison sociale] · [Adresse] · <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a> · <a href="en/" lang="en">English version</a> · © 2026</p>
+  <p class="fine"><a href="mailto:info@allopatrick.com">info@allopatrick.com</a> · Thyez, Haute-Savoie · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="en/" lang="en">English version</a> · © 2026</p>
 </footer>
 
 </body>

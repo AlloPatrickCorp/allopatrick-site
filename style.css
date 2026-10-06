@@ -95,6 +95,14 @@ li::marker { color: var(--ink-soft); }
 .does .shots img { border: 1px solid var(--line); }
 figcaption { color: var(--ink-soft); font-size: 15px; margin-top: 10px; }
 
+/* Pour qui */
+.who .cols p { font-size: 18px; }
+
+/* Pages légales */
+.legal { max-width: 760px; }
+.legal h3 { margin-top: 28px; }
+.legal p, .legal li { font-size: 16px; }
+
 /* Étapes */
 .steps ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; counter-reset: step; }
 .steps li { counter-increment: step; border-top: 1px solid var(--line); padding-top: 18px; }
