@@ -1,0 +1,147 @@
+/* Patrick — site vitrine. Charte XP ELEC mai 2025 : Chillax, gris 494B4A / 2E312F, vert pâle E2EED6. */
+
+@font-face { font-family: "Chillax"; font-weight: 400; src: url(fonts/Chillax-Regular.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Chillax"; font-weight: 500; src: url(fonts/Chillax-Medium.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Chillax"; font-weight: 600; src: url(fonts/Chillax-Semibold.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Chillax"; font-weight: 700; src: url(fonts/Chillax-Bold.woff2) format("woff2"); font-display: swap; }
+
+:root {
+  --ink: #494B4A;
+  --ink-deep: #2E312F;
+  --ink-soft: #6F726F;
+  --line: #E1E4DE;
+  --bg-soft: #F6F7F4;
+  --green-pale: #E2EED6;
+  --green: #CBDBBA;
+  --green-deep: #5C7D4D;
+  --beige: #F0E4D5;
+  --white: #fff;
+  --measure: 1100px;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+* { box-sizing: border-box; }
+/* Les pistes 1fr ne doivent jamais être élargies par une image : min-width 0 sur les enfants des grilles. */
+.hero > *, .cols > *, .shots > *, .steps li, .faq dt, .faq dd, figure { min-width: 0; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  overflow-x: clip;
+  font-family: "Chillax", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--ink-deep); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+img { display: block; max-width: 100%; height: auto; }
+b { font-weight: 600; color: var(--ink-deep); }
+h1, h2, h3 { font-weight: 600; color: var(--ink-deep); line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+
+/* Marque : le mot en Chillax bold + le petit carré vert, comme sur les documents. */
+.wordmark { display: inline-flex; align-items: baseline; gap: 0.18em; font-weight: 700; font-size: 26px; color: var(--ink-deep); }
+.wordmark i { display: inline-block; width: 0.42em; height: 0.42em; background: var(--green); transform: translateY(-0.05em); }
+.wordmark.small { font-size: 22px; }
+.wordmark:hover { text-decoration: none; }
+
+/* Barre du haut */
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  max-width: var(--measure); margin: 0 auto; padding: 22px var(--gutter);
+}
+.top nav { display: flex; align-items: center; gap: 26px; font-size: 16px; }
+.top nav a:not(.btn) { color: var(--ink); }
+
+.btn {
+  display: inline-block; padding: 11px 18px; border: 1px solid var(--ink-deep);
+  background: var(--ink-deep); color: var(--white); font-weight: 500; font-size: 16px; line-height: 1;
+}
+.btn:hover { background: var(--ink); border-color: var(--ink); text-decoration: none; }
+.link { font-weight: 500; }
+.top nav .lang { color: var(--ink-soft); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; border-left: 1px solid var(--line); padding-left: 18px; }
+
+main { display: block; }
+section { max-width: var(--measure); margin: 0 auto; padding: 72px var(--gutter); border-top: 1px solid var(--line); }
+section h2 { font-size: 30px; margin-bottom: 8px; }
+section h2::after { content: ""; display: block; width: 3.5em; height: 3px; background: var(--green); margin: 14px 0 34px; }
+section h3 { font-size: 20px; margin-bottom: 12px; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+p { margin: 0 0 1em; }
+ul, ol { margin: 0; padding-left: 1.2em; }
+li { margin-bottom: 0.7em; }
+li::marker { color: var(--ink-soft); }
+.proof { color: var(--ink-soft); font-size: 15px; }
+.note { color: var(--ink-soft); font-size: 15px; }
+
+/* Accueil */
+.hero { border-top: 0; padding-top: 48px; display: grid; grid-template-columns: 6fr 6fr; gap: 48px; align-items: center; }
+.kicker { text-transform: uppercase; letter-spacing: 0.08em; font-size: 13px; color: var(--ink-soft); font-weight: 500; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(34px, 4.2vw, 52px); }
+.lead { font-size: 20px; margin: 22px 0 26px; }
+.actions { display: flex; align-items: center; gap: 22px; margin-bottom: 18px; }
+.hero-shots { position: relative; margin: 0; }
+.hero-shots .web { width: 100%; border: 1px solid var(--line); }
+.hero-shots .phone { position: absolute; width: 31%; right: -4%; bottom: -10%; border: 1px solid var(--line); background: var(--white); }
+
+/* Histoire */
+.story .cols p:first-child { font-size: 19px; color: var(--ink-deep); }
+.pull { border-left: 3px solid var(--green); padding-left: 18px; color: var(--ink-deep); font-weight: 500; font-size: 19px; }
+
+/* Ce qu'il fait */
+.does .shots { display: grid; grid-template-columns: 1fr 2.2fr 2.2fr; gap: 28px; margin-top: 56px; align-items: end; }
+.does .shots figure { margin: 0; }
+.does .shots img { border: 1px solid var(--line); }
+figcaption { color: var(--ink-soft); font-size: 15px; margin-top: 10px; }
+
+/* Étapes */
+.steps ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; counter-reset: step; }
+.steps li { counter-increment: step; border-top: 1px solid var(--line); padding-top: 18px; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-weight: 600; color: var(--ink-soft); font-size: 14px; letter-spacing: 0.06em; margin-bottom: 10px; }
+
+/* Tarif */
+.pricing .cols { gap: 28px; }
+.price { background: var(--bg-soft); padding: 28px 30px 20px; }
+.amount { font-size: 38px; font-weight: 600; color: var(--ink-deep); margin: 0 0 14px; line-height: 1; }
+.amount small { font-size: 15px; font-weight: 400; color: var(--ink-soft); margin-left: 6px; }
+.terms { margin-top: 28px; }
+.pilot { margin-top: 48px; background: var(--green-pale); padding: 30px 32px 22px; }
+.pilot h3 { margin-bottom: 10px; }
+.pilot .btn { margin-top: 4px; }
+
+/* Questions */
+.faq dl { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; margin: 0; }
+.faq dt { font-weight: 600; color: var(--ink-deep); margin-bottom: 6px; }
+.faq dd { margin: 0; }
+
+/* Contact */
+.contact .big { font-size: 26px; font-weight: 500; line-height: 1.5; margin: 20px 0 28px; }
+
+/* Pied */
+footer { border-top: 1px solid var(--line); background: var(--bg-soft); }
+footer > * { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
+footer .wordmark { padding-top: 36px; }
+footer p { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--ink-soft); margin: 10px auto 0; }
+footer img { display: inline-block; }
+footer .fine { font-size: 14px; padding-bottom: 36px; margin-top: 18px; display: block; }
+footer .fine a { color: var(--ink-soft); }
+
+/* Téléphone */
+@media (max-width: 900px) {
+  .top { flex-wrap: wrap; padding-top: 18px; }
+  .top nav { width: 100%; justify-content: flex-start; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+  .hero, .cols, .faq dl { grid-template-columns: 1fr; }
+  .hero { gap: 36px; padding-top: 28px; }
+  .hero-shots { padding-bottom: 12%; margin-right: 0; }
+  .hero-shots .phone { right: 0; bottom: 0; width: 34%; }
+  .cols { gap: 28px; }
+  .does .shots { grid-template-columns: 1fr; align-items: start; }
+  .does .shots figure:first-child img { width: 60%; }
+  .steps ol { grid-template-columns: 1fr; gap: 22px; }
+  section { padding: 48px var(--gutter); }
+  section h2 { font-size: 26px; }
+  .actions { flex-wrap: wrap; gap: 16px; }
+  .faq dl { gap: 6px 0; }
+  .faq dd { margin-bottom: 24px; }
+}

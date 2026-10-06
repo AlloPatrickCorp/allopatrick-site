@@ -1,0 +1,18 @@
+# allopatrick.fr — static site on OVH shared hosting
+AddDefaultCharset UTF-8
+Options -Indexes
+ErrorDocument 404 /404.html
+
+# always https, always without www
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://allopatrick.fr/$1 [R=301,L]
+
+# fonts and images may be cached a long time; pages must not
+<FilesMatch "\.(woff2|png|svg|ico)$">
+  Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+<FilesMatch "\.(html|css)$">
+  Header set Cache-Control "no-cache"
+</FilesMatch>
