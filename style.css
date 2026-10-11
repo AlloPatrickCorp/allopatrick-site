@@ -81,9 +81,8 @@ li::marker { color: var(--ink-soft); }
 .hero h1 { font-size: clamp(34px, 4.2vw, 52px); }
 .lead { font-size: 20px; margin: 22px 0 26px; }
 .actions { display: flex; align-items: center; gap: 22px; margin-bottom: 18px; }
-.hero-shots { display: flex; align-items: flex-end; gap: 14px; margin: 0; }
-.hero-shots .web { width: 74%; border: 1px solid var(--line); }
-.hero-shots .phone { width: 22%; border: 1px solid var(--line); background: var(--white); }
+.hero-shots { margin: 0; }
+.hero-shots .web { width: 100%; border: 1px solid var(--line); }
 
 /* Histoire */
 .story-page { border-top: 0; }
@@ -142,7 +141,6 @@ footer .fine a { color: var(--ink-soft); }
   .top nav { width: 100%; justify-content: flex-start; gap: 18px; flex-wrap: wrap; font-size: 15px; }
   .hero, .cols, .faq dl { grid-template-columns: 1fr; }
   .hero { gap: 36px; padding-top: 28px; }
-  .hero-shots { gap: 10px; }
   .cols { gap: 28px; }
   .does .shots { grid-template-columns: 1fr; align-items: start; }
   .does .shots figure:first-child img { width: 60%; }
